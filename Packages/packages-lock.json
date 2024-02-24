@@ -10,13 +10,6 @@
       },
       "hash": "d6867dfb3c583b90b8da2bc565992352c4902407"
     },
-     "com.oculus.integration.interaction":{
-      "version": "0.57.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.ai.navigation": {
       "version": "1.1.4",
       "depth": 0,
