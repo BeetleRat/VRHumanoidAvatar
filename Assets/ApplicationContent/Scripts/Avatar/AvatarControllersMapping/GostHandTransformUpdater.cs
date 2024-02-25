@@ -1,17 +1,5 @@
 ﻿using UnityEngine;
 
-/**
-Класс, отвечающий за синхронизацию положения рук на сервере
-
-Данный класс синхронизирует руки из prefab-а LeftHandSynthetic/RightHandSynthetic.
-
-Класс ориентируется на название костей в руках. А именно он ищет в сцене и в переданном объекте объекты с названиями:
-
-@param handType Тип руки:
-    - None;
-    - Right;
-    - Left;
-*/
 /// <summary>
 /// <para>A class responsible for synchronizing the position of the avatar's hands.</para>
 /// This class synchronizes the hands from the LeftHandSynthetic/RightHandSynthetic prefab.
@@ -57,8 +45,10 @@
 /// <item><description>b_l_thumb3;</description></item>
 /// <item><description>b_r_thumb3;</description></item>
 /// </list>
+/// This class also finds on the stage a display of the player’s hands by the name of the prefab:
+/// OVRLeftHandVisual or OVRRightHandVisual
 /// </summary>
-public class GostHandTransformUpdater : ControllerModel
+public sealed class GostHandTransformUpdater : ControllerModel
 {
     [SerializeField] private HandType _handType;
 
@@ -166,7 +156,8 @@ public class GostHandTransformUpdater : ControllerModel
 
     private void FindLocalHand()
     {
-        _wrist = GameObject.Find(_prefix + "_wrist").transform;
+        var rootLocalHand = GetRootLocalHand();
+        _wrist = rootLocalHand.Find(_prefix + "_wrist");
 
         _index1 = _wrist.Find(_prefix + "_index1").transform;
         _index2 = _index1.Find(_prefix + "_index2").transform;
@@ -189,6 +180,12 @@ public class GostHandTransformUpdater : ControllerModel
         _thumb1 = _thumb0.Find(_prefix + "_thumb1").transform;
         _thumb2 = _thumb1.Find(_prefix + "_thumb2").transform;
         _thumb3 = _thumb2.Find(_prefix + "_thumb3").transform;
+    }
+
+    private Transform GetRootLocalHand()
+    {
+        return GameObject.Find($"OVR{_handType.ToString()}HandVisual")
+            .transform.GetChild(0);
     }
 
     private void ParseAvatarHand()

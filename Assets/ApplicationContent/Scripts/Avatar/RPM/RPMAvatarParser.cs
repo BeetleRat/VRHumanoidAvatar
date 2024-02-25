@@ -67,7 +67,7 @@ public enum Gender
 /// <param name="beard">Whether to use the beard model in the avatar</param>
 /// <param name="glasses">Whether to use the glasses model in the avatar</param>
 /// </summary>
-public class RPMAvatarParser : MonoBehaviour
+public sealed class RPMAvatarParser : MonoBehaviour
 {
     [SerializeField] private Gender _skeletonGender;
     [SerializeField] private RPMAvatarInfo _rpmAvatarInfo;

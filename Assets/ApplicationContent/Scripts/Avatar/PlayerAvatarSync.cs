@@ -39,7 +39,7 @@
 /// <param name="controllertTypeController">An array of <see cref="ControllerTypeManager"/> that are managed by this class.</param>
 /// <param name="dublicateMainPlayer"></param>
 /// </summary>
-public class PlayerAvatarSync : MonoBehaviour
+public sealed class PlayerAvatarSync : MonoBehaviour
 {
     [SerializeField] private Transform _head;
     [SerializeField] private Transform _leftHand;

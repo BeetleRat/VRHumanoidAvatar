@@ -16,7 +16,7 @@ using UnityEngine;
 /// this class changes the avatar's displayed controller type.
 /// <param name="controllers">the list of switchable controllers</param>
 /// </summary>
-public class ControllerTypeManager : MonoBehaviour
+public sealed class ControllerTypeManager : MonoBehaviour
 {
     [SerializeField] private List<ControllerModel> _controllers;
 

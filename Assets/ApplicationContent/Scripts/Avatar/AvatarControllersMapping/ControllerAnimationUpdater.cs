@@ -6,7 +6,7 @@
 /// depending on the buttons/sticks/triggers pressed on the local controller.
 /// <param name="animator">The avatar controller animator</param>
 /// </summary>
-public class ControllerAnimationUpdater : ControllerModel
+public sealed class ControllerAnimationUpdater : ControllerModel
 {
     [SerializeField] private Animator _animator;
 

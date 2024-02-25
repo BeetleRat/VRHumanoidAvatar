@@ -8,7 +8,7 @@ using UnityEngine.UI;
 /// <param name="unselectCheckboxImage">the unselected checkbox image</param>
 /// <param name="selectFrameImage">the selected frame image</param>
 /// </summary>
-public class AvatarListItem : MonoBehaviour
+public sealed class AvatarListItem : MonoBehaviour
 {
     [SerializeField] private Image _avatarImage;
     [SerializeField] private Image _selectCheckboxImage;

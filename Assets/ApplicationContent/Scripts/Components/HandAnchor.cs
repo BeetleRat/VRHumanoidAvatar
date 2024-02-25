@@ -16,7 +16,7 @@ public enum HandType
 /// <param name="handType"><see cref="HandType"/> of the controller that will be bound to this component</param>
 /// <param name="controllerEvents">The scene <see cref="ControllerEvents"/></param>
 /// </summary>
-public class HandAnchor : MonoBehaviour
+public sealed class HandAnchor : MonoBehaviour
 {
     [SerializeField] private HandType _handType;
     [SerializeField] private ControllerEvents _controllerEvents;

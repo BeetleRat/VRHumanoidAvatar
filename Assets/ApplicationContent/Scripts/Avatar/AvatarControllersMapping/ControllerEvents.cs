@@ -4,7 +4,7 @@ using UnityEngine.Events;
 /// <summary>
 /// <para>Class that tracks the switch from controllers to hands</para>
 /// </summary>
-public class ControllerEvents : MonoBehaviour
+public sealed class ControllerEvents : MonoBehaviour
 {
     /// <summary>
     /// The event of switching controllers to hands or vice versa.

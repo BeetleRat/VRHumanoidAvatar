@@ -7,7 +7,7 @@
 /// Depending on this parameter, a skeleton will be selected, to which the model will be attached.
 /// </param>
 /// </summary>
-public class RPMAvatarInfo : AvatarInfo
+public sealed class RPMAvatarInfo : AvatarInfo
 {
     [SerializeField] private GameObject _redyPlayerMeAvatar;
     [SerializeField] private Gender _gender;

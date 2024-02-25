@@ -5,7 +5,7 @@ using UnityEngine;
 /// <para>Class for setting the position and rotation of a skeleton bone to the target position.</para> 
 /// </summary>
 [Serializable]
-public class MapRigTransform
+public sealed class MapRigTransform
 {
     /// <summary>
     /// The position at which the specified bone will be installed.
@@ -47,7 +47,7 @@ public class MapRigTransform
 /// <param name="bodyOffset">Offset distance of the displayed body from the central camera of the helmet</param>
 /// <param name="turningSmoothness">Smoothness of body rotation following the head</param>
 /// </summary>
-public class MapAvatarBody : MonoBehaviour
+public sealed class MapAvatarBody : MonoBehaviour
 {
     [SerializeField] private MapRigTransform _head;
     [SerializeField] private MapRigTransform _rightHand;

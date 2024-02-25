@@ -19,7 +19,7 @@ using UnityEngine;
 /// </param>
 /// <param name="avatarsFolder">Path to folder containing avatar prefabs</param>
 /// </summary>
-public class AvatarList : MonoBehaviour
+public sealed class AvatarList : MonoBehaviour
 {
     [SerializeField] private Transform _avatarsListContent;
     [SerializeField] private GameObject _avatarListItemPrefab;

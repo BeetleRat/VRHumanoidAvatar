@@ -24,7 +24,7 @@
 /// <param name="controllerBodyPart">An anchor to which an object is attached</param>
 /// <param name="handBodyPart">(*Optional*) If the object is attached to the hands, then this parameter specifies the anchor for attaching to the hands</param>
 /// </summary>
-public class AttachToPlayersBody : MonoBehaviour
+public sealed class AttachToPlayersBody : MonoBehaviour
 {
     [SerializeField] private ControllerEvents _controllerEvents;
     [SerializeField] private Transform _controllerBodyPart;
